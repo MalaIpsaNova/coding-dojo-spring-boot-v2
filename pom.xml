@@ -5,8 +5,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.6.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.7.1</version> <!-- Bump Spring version due to recent NVD reported vulnerabilities -->
+        <relativePath/>
     </parent>
     <groupId>com.assignment</groupId>
     <artifactId>coding-dojo-spring-boot</artifactId>
@@ -29,9 +29,10 @@
         </dependency>
 
         <dependency>
-            <groupId>postgresql</groupId>
+            <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>9.1-901-1.jdbc4</version>
+            <!-- Adding a specific version here broke functionality in ways I never thought possible.
+            Sometimes less really is more. -->
         </dependency>
 
         <dependency>
@@ -39,8 +40,13 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-    </dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
 
+    </dependencies>
     <build>
         <plugins>
             <plugin>

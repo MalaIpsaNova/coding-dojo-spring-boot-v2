@@ -1,6 +1,7 @@
 package com.assignment.spring;
 
 import com.assignment.spring.api.WeatherResponse;
+import com.assignment.spring.repository.WeatherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +15,6 @@ public class WeatherController {
 
     @Autowired
     private RestTemplate restTemplate;
-
     @Autowired
     private WeatherRepository weatherRepository;
 
@@ -31,7 +31,6 @@ public class WeatherController {
         entity.setCity(response.getName());
         entity.setCountry(response.getSys().getCountry());
         entity.setTemperature(response.getMain().getTemp());
-
         return weatherRepository.save(entity);
     }
 }

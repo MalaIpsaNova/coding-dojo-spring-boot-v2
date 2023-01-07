@@ -2,15 +2,11 @@ package com.assignment.spring;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class ApplicationTests {
-
+@RunWith(MockitoJUnitRunner.class)
+public class ApplicationTests extends BaseControllerServicesTest {
 	@Test
 	public void contextLoads() {
 	}
-
 }
