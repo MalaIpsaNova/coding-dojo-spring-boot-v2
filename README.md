@@ -1,5 +1,14 @@
 Spring Boot Coding Dojo
 ---
+### Change log
+- added openapi (swagger) configuration, see http://localhost:8080/swagger-ui.html
+- bump spring boot version to avoid recent security issues stated in National Vulnerability Database
+- add postgres configuration
+- reorder packages, introduce service layer, converters, model, repositories etc.
+- add some Javadocs
+- add some Unit Testing
+- add application.properties file
+- add yml file configuration and add to .gitignore
 
 Welcome to the Spring Boot Coding Dojo!
 

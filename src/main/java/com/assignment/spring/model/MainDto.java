@@ -1,5 +1,5 @@
 
-package com.assignment.spring.api;
+package com.assignment.spring.model;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "temp_min",
     "temp_max"
 })
-public class Main {
+public class MainDto {
 
     @JsonProperty("temp")
     private Double temp;

@@ -1,5 +1,5 @@
 
-package com.assignment.spring.api;
+package com.assignment.spring.model;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "sunrise",
     "sunset"
 })
-public class Sys {
+public class SysDto {
 
     @JsonProperty("type")
     private Integer type;

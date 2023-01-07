@@ -32,9 +32,8 @@
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <!-- Adding a specific version here broke functionality in ways I never thought possible.
-            Sometimes less really is more. -->
+            Sometimes less really is more and Spring Boot's dependency management works better than anything. -->
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -45,7 +44,11 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.6.14</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

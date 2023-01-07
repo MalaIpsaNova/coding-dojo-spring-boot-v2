@@ -1,5 +1,5 @@
 
-package com.assignment.spring.api;
+package com.assignment.spring.model;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "description",
     "icon"
 })
-public class Weather {
+public class WeatherDto {
 
     @JsonProperty("id")
     private Integer id;
