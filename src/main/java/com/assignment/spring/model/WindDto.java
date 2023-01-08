@@ -9,7 +9,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import lombok.Data;
 
+@Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "speed",
@@ -22,27 +24,7 @@ public class WindDto {
     @JsonProperty("deg")
     private Integer deg;
     @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-
-    @JsonProperty("speed")
-    public Double getSpeed() {
-        return speed;
-    }
-
-    @JsonProperty("speed")
-    public void setSpeed(Double speed) {
-        this.speed = speed;
-    }
-
-    @JsonProperty("deg")
-    public Integer getDeg() {
-        return deg;
-    }
-
-    @JsonProperty("deg")
-    public void setDeg(Integer deg) {
-        this.deg = deg;
-    }
+    private Map<String, Object> additionalProperties = new HashMap<>();
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
