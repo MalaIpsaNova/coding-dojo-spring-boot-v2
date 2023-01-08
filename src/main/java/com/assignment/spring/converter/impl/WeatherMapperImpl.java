@@ -23,6 +23,8 @@ public class WeatherMapperImpl implements WeatherMapper {
      */
     public WeatherEntity mapWeatherResponse(WeatherResponse response) {
         WeatherEntity entity = new WeatherEntity();
+        //TODO - consider defining a custom Exception and replace with <<orElseThrow>> to properly handle weather api
+        //malfunctioning
         entity.setCity(Optional.ofNullable(response.getName()).orElse(Constants.EMPTY));
         entity.setCountry(Optional.ofNullable(response.getSys()).map(SysDto::getCountry).orElse(Constants.EMPTY));
         entity.setTemperature(Optional.ofNullable(response.getMain()).map(MainDto::getTemp).orElse(Double.NaN));
